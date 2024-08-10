@@ -1,0 +1,22 @@
+.responsive-img {
+    width: 100%; /* กว้างที่สุดของ container */
+    height: auto; /* รักษาสัดส่วนของรูปภาพ */
+    border-radius: 15px; /* ขอบมน */
+    object-fit: cover; /* ครอบคลุมพื้นที่ container */
+  }
+  
+  /* Media Queries สำหรับหน้าจอที่มีความกว้างไม่เกิน 600px */
+  @media (max-width: 600px) {
+    .responsive-img-container {
+      display: flex;
+      flex-direction: column; /* จัดรูปภาพแนวตั้งบนหน้าจอเล็ก */
+      align-items: center;
+      gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+      padding: 10px; /* ระยะห่างรอบๆ container */
+    }
+  
+    .responsive-img {
+      max-width: 100%; /* ปรับขนาดสูงสุดของรูปภาพให้เต็มความกว้างของ container */
+    }
+  }
+  

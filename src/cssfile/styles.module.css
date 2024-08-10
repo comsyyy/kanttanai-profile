@@ -1,0 +1,95 @@
+/* ศูนย์กลางเนื้อหาทั้งหมดแนวตั้งและแนวนอน */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* ทำให้คอนเทนเนอร์เต็มความสูงของหน้าจอ */
+    padding: 10px; /* เพิ่มการเว้นระยะเพื่อป้องกันเนื้อหาติดขอบ */
+  }
+  
+  /* พื้นที่เนื้อหาหลัก */
+  .main {
+    min-width: 100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: auto; /* ปรับความสูงตามเนื้อหา */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* สไตล์สำหรับรายการที่มีการเคลื่อนไหว */
+  .transitionsItem {
+    overflow: visible; /* ป้องกันไม่ให้ข้อความถูกตัด */
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: flex-start; /* จัดข้อความไปทางซ้าย */
+    align-items: center; /* จัดข้อความให้อยู่ตรงกลางแนวตั้ง */
+    font-size: 4em; /* ขนาดฟอนต์สำหรับหน้าจอใหญ่ */
+    font-weight: 800;
+    text-transform: uppercase;
+    will-change: transform, opacity, height;
+    white-space: nowrap;
+    cursor: pointer;
+    line-height: 1.2; /* ปรับระยะห่างบรรทัดสำหรับการจัดแนวแนวตั้งที่ดีขึ้น */
+    text-align: left; /* จัดข้อความไปทางซ้าย */
+  }
+  
+  /* สไตล์สำหรับคอนเทนเนอร์ปุ่ม */
+  .button-container {
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    margin-top: 20px; /* ระยะห่างระหว่างข้อความและปุ่ม */
+    flex-wrap: wrap; /* ให้ปุ่มห่อหุ้มได้หากไม่พอในบรรทัดเดียว */
+    justify-content: center; /* จัดปุ่มให้อยู่ตรงกลางแนวนอน */
+  }
+  
+  /* สไตล์ปุ่มแบบกำหนดเอง */
+  .custom-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Media Queries สำหรับความเข้ากันได้ */
+  @media (max-width: 1024px) {
+    .transitionsItem {
+      font-size: 3em; /* ปรับขนาดฟอนต์สำหรับแท็บเล็ต */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .transitionsItem {
+      font-size: 2.5em; /* ปรับขนาดฟอนต์สำหรับหน้าจอเล็กลง */
+    }
+  
+    .button-container {
+      flex-direction: column; /* จัดปุ่มให้เป็นแนวตั้งบนหน้าจอเล็ก */
+    }
+  
+    .custom-btn {
+      padding: 8px 16px; /* ปรับการเว้นระยะสำหรับหน้าจอเล็ก */
+      font-size: 0.9em; /* ปรับขนาดฟอนต์สำหรับปุ่ม */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .transitionsItem {
+      font-size: 2em; /* ลดขนาดฟอนต์สำหรับหน้าจอขนาดเล็กมาก */
+    }
+  
+    .button-container {
+      flex-direction: column; /* จัดปุ่มให้เป็นแนวตั้งบนหน้าจอเล็กมาก */
+    }
+  
+    .custom-btn {
+      padding: 10px 12px; /* ปรับการเว้นระยะสำหรับหน้าจอเล็กมาก */
+      font-size: 0.8em; /* ปรับขนาดฟอนต์สำหรับปุ่ม */
+    }
+  }
+  
