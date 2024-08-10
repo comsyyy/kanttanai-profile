@@ -14,6 +14,7 @@ function App() {
   }
   return (
     <div className="App">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link>
       <Navbar/>
       <img src="photo/profile.jpg" alt="Profile" className="profile-image" />
       <div className="typewriter-text">
